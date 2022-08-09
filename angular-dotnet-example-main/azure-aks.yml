@@ -4,12 +4,13 @@ metadata:
   creationTimestamp: null
   labels:
     app: angular-webapp
-   spec:
-  replicas: 3
+  name: angular-webapp
+spec:
+  replicas: 2
   selector:
     matchLabels:
       app: angular-webapp
-       strategy: {}
+  strategy: {}
   template:
     metadata:
       creationTimestamp: null
@@ -31,7 +32,7 @@ apiVersion: v1
 kind: Service
 metadata:
   name: angular-webapp
-    labels:
+  labels:
     run: angular-webapp
 spec:
   ports:
@@ -39,4 +40,4 @@ spec:
     protocol: TCP
   selector:
     app: angular-webapp
-  type: LoadBalancer
+  type: NodePort
