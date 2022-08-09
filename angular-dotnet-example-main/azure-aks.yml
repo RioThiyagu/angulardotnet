@@ -40,4 +40,4 @@ spec:
     protocol: TCP
   selector:
     app: angular-webapp
-  type: NodePort
+  type: LoadBalancer
