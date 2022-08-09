@@ -6,7 +6,7 @@ metadata:
     app: angular-webapp
   name: angular-webapp
 spec:
-  replicas: 5
+  replicas: 2
   selector:
     matchLabels:
       app: angular-webapp
@@ -18,7 +18,7 @@ spec:
         app: angular-webapp
     spec:
       containers:
-      - image: docker.io/bbachin1/angular-dotnet-webapp
+      - image: akspocdotnetconatiner.azurecr.io/riothiyagu/angulardotnet
         name: webapp
         imagePullPolicy: Always
         resources: {}
